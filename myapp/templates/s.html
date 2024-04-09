@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sidebar OOH</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style4.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIMfUE3ZL8AByYgBESLwe+M2EwM90IcY7" crossorigin="anonymous">
+  <!-- Font Awesome CSS link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-qfhoGU3AAnzRHlr52LGeY1Al1OISzwaZoV5u5EEvI0q4h3v3mpsjUJlYs6dVGc5n" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class="side-header">
+    <header class="hero-slider">
+
+      <h1></h1>
+
+    </header>
+
+    <nav class="navbar-side">
+
+      <ul>
+
+        <li>
+          <a href="#">
+            <div class="icon-space"><i class="fas fa-home"></i></div> Tamil
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'english' %}">
+            <div class="icon-space"><i class="fas fa-fire"></i></div> English
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'maths' %}">
+            <div class="icon-space"><i class="fas fa-book"></i></div> Maths
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'computer' %}">
+            <div class="icon-space"><i class="fas fa-history"></i></div> Computer
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="icon-space"><i class="fas fa-newspaper"></i></div> Games
+          </a>
+        </li>
+
+        <li class="bottom"><a href="#">
+            <div class="icon-space"><i class="fas fa-newspaper"></i></div> Logout
+
+          </a>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <div class="footer">
+      <p>Learning is Important for All</p>
+    </div>
+
+  </header>
+
+  <div class="body-wrapper row">
+
+    <div class="content-wrapper">
+
+      <header class="top-header">
+
+        <div class="menu-btn toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+            viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve">
+            <g>
+              <g>
+                <path
+                  d="M4.667,82.982H95v-6.018H4.667V82.982z M4.667,52.895H95v-6.018H4.667V52.895z M4.667,19.798v6.018H95v-6.018H4.667z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <a href="#">
+          <div class="logo">
+            Learn with <span>Games</span>
+          </div>
+        </a>
+        <nav class="navbar-top">
+
+          <ul>
+            <!---
+            <li>
+              <form>
+                <input type="search" name="" placeholder="Search for games">
+              </form>
+            </li>
+            --->
+            <li><a href="{% url 'user_login' %}" class="sp-btn">Log in</a></li>
+            <li><a href="{% url 'register' %}" class="ss-btn">Register</a></li>
+
+          </ul>
+
+        </nav>
+      </header>
+
+      <header class="hero-slider">
+
+        <h1></h1>
+
+      </header>
+      {% block content %}{% endblock %}
+
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"
+    integrity="sha384-Z4P9mM4Y1rXpEp3DlqMsYyFu84/0Idhq9ad58n9a7DLiwoAj8CPofykH+HbST0kL"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIMfUE3ZL8AByYgBESLwe+M2EwM90IcY7"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      //Mobile Menu Toggle
+      var $body = $('body');
+      var $btnMenu = $('.toggle-btn');
+
+      $btnMenu.click(function () {
+        $body.toggleClass('menu-open');
+      });
+
+      //On Scroll Functionality
+      $(window).scroll(() => {
+        var windowTop = $(window).scrollTop();
+        windowTop > 100 ? $('.nav_container').addClass('navShadow') : $('.nav_container').removeClass('navShadow');
+        windowTop > 100 ? $('ul').css('top', '100px') : $('ul').css('top', '160px');
+      });
+      //Click Logo To Scroll To Top
+      $('.top').on('click', () => {
+        $('html,body').animate({
+          scrollTop: 0
+        }, 500);
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

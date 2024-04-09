@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgb(220, 20, 60,0.6);
+  -webkit-text-size-adjust:none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  background: #fff;
+  color: #4a5568;
+  font-size: 62.5%;
+  font-variant-ligatures: normal;
+  font-kerning: normal;
+  overflow-x: hidden;
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;    
+}
+
+p, span, a, div, input {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+}
+
+  .body-wrapper {
+    width: 100%;
+    position: absolute;
+  }
+
+    /* Flex area */
+
+    .row {
+      display:-ms-flexbox;
+      display:flex;
+    }
+
+    /* Flex end */
+
+    .side-header {
+      position: fixed;
+      width: 15%;
+      height: 100vh;
+      padding: 1rem 2em;
+      overflow-x: hidden;
+      background: #1C646D;
+      z-index: 2;
+    }
+    .menu-open .side-header {
+            z-index: 0;
+            width: 0%;
+            visibility: hidden;
+            opacity: 0;
+    }
+      .navbar-side {
+        margin-top: 2rem;
+        height: 450px;
+        position: relative;
+        width: 100%;
+      }
+        .logo {
+          
+          color: #042326;
+          font-size: 35px;
+          font-weight: bolder;
+        }
+        .navbar-side ul li {
+          width: 100%;
+          padding: 4px 1em;
+          margin-bottom: 3px;
+          display: block;
+          border-radius: 3px;
+          transition: background 0.3s ease-in-out;
+        }
+        .navbar-side ul li:hover,
+        .navbar-side ul li.active {
+            background: #159A9C; /* Change to your desired background color on hover and active states */
+            color: #ffffff; /* Change to your desired text color on hover and active states */
+            border-left: 3px solid #3498db; /* Add a left border on hover and active states */
+            transition: background 0.3s ease, color 0.3s ease, border-left 0.3s ease; /* Add a smooth transition effect */
+        }
+        .bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+          .navbar-side a {
+            font-weight: bold;
+            color: #f2ecec;
+            font-size: 24px;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+            .navbar-side ul li a .svg-space {
+              width: 60px;
+            }
+              .navbar-side ul li a .svg-space svg {
+                width: 40px;
+                height: 40px;
+                margin-bottom: -12px;
+              }
+        .footer {
+          
+          color:#f2ecec;
+          position: absolute;
+          border: 0;
+          left: 0;
+          padding: 0 2rem;
+          margin: 2rem 0;
+        }
+
+    .content-wrapper {
+      width: 80%;
+      height: 200vh;
+      padding: 0 2rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu-open .content-wrapper, .menu-open .top-header {
+      width: 100%;
+    }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 65px;
+      width: 100%;
+      position: fixed;
+      background: #A0CD60;
+      top: 0;
+      right: 0;
+      padding: 0 2rem;
+      z-index: 99;
+    }
+      .top-header .menu-btn, .top-header .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        cursor: pointer;
+        padding: 12px;
+        transition: background 0.3s ease-in-out;
+      }
+        .top-header .menu-btn:hover {
+          background: #edf2f7;
+          
+        }
+
+          .navbar-top li {
+            display: inline-block;
+            margin-left: 20px;
+          }
+            .sp-btn {
+              padding: 10px 40px;
+              background: #4a5568;
+              color: #fff;
+              border-radius: 3px;
+            }
+            .ss-btn {
+              padding: 10px 40px;
+              background: #0a0c0f;
+              color: #fff;
+              border-radius: 3px;
+            }
+          input {
+            padding: 9px 10px;
+            border: 1px solid #4a5568;
+            width: 400px;
+          }
+    .hero-slider {
+      margin-top: 80px;
+      
+    }
+
+    main {
+      width: 100%;
+      margin: 2rem 0;
+    }
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .game-list {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        -webkit-column-width: 20%;
+        -moz-column-width: 20%;
+        column-width: 20%;
+        position: relative;
+        margin-top: 2em;
+    }
+    
+    .game-list div {
+        transition: all 0.3s ease; /* Add a smooth transition effect */
+    }
+    
+    .game-list div:hover {
+        border: 2px solid #3498db; /* Change to a blue border on hover */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+        transform: scale(1.05); /* Add a slight scale effect on hover */
+    }
+    
+    
+        .game {
+          height: auto;
+          overflow: hidden;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .side-header {
+            width: 100%;
+            padding: 1rem;
+            position: relative;
+          }
+        
+          .menu-open .side-header {
+            z-index: 2;
+            width: 100%;
+            visibility: visible;
+            opacity: 1;
+          }
+        
+          .content-wrapper {
+            width: 100%;
+            padding: 0 1rem;
+          }
+        
+          .menu-open .content-wrapper,
+          .menu-open .top-header {
+            width: 100%;
+          }
+        }

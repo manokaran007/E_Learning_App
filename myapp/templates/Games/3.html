@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Player</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .audio-player {
+        margin: 50px auto;
+        width: 300px;
+    }
+    audio {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .controls button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    .controls button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="audio-player">
+    <div>
+        <h1>Game 3</h1>
+        <h1>Listen</h1>
+        <audio id="audio1" controls>
+            <source src="your-audio-file-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <button onclick="playAudio('audio1')">Play</button>
+            <button onclick="pauseAudio('audio1')">Pause</button>
+            <button onclick="stopAudio('audio1')">Stop</button>
+        </div>
+    </div>
+    <div>
+        <h1>Find the Missing Word</h1>
+        <audio id="audio2" controls>
+            <source src="https://github.com/manokaran007/_voice/raw/main/Tamil/Tam1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <button onclick="playAudio('audio2')">Play</button>
+            <button onclick="pauseAudio('audio2')">Pause</button>
+            <button onclick="stopAudio('audio2')">Stop</button>
+        </div>
+    </div>
+    <div>
+        <h1>Correct Answer</h1>
+        <audio id="audio3" controls>
+            <source src="https://github.com/final2024/new/raw/main/English/Eng1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <button onclick="playAudio('audio3')">Play</button>
+            <button onclick="pauseAudio('audio3')">Pause</button>
+            <button onclick="stopAudio('audio3')">Stop</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function playAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.play();
+    }
+
+    function pauseAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.pause();
+    }
+
+    function stopAudio(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.pause();
+        audio.currentTime = 0;
+    }
+</script>
+
+</body>
+</html>

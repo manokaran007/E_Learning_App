@@ -1,0 +1,202 @@
+{% extends 'matind.html' %}
+
+{% block content %}
+<main>
+<form method='post' action=''>
+    {% csrf_token %}
+    
+    
+    <audio controls>
+        <source src="https://github.com/manokaran007/_voice/raw/main/Maths/Mat1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="form-group">
+        <label for="question">{{question1}}</label>
+      </div>
+    <div class="form-check" >
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question1}}" id="gridRadios1" value="option1" >
+            <label class="form-check-label" for="gridRadios1">
+                {{q1op1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question1}}" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+                {{q1op2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question1}}" id="gridRadios1" value="option3">
+            <label class="form-check-label" for="gridRadios1">
+                {{q1op3}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question1}}" id="gridRadios2" value="option4">
+            <label class="form-check-label" for="gridRadios2">
+                {{q1op4}}
+            </label>
+        </div>
+        <br>
+    </div>
+    
+    <audio controls>
+        <source src="https://github.com/manokaran007/_voice/raw/main/Maths/Mat2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="form-group">
+        <label for="question">{{question2}}</label>
+      </div>
+    <div class="form-check">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question2}}" id="gridRadios1" value="option1" >
+            <label class="form-check-label" for="gridRadios1">
+                {{q2op1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question2}}" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+                {{q2op2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question2}}" id="gridRadios1" value="option3">
+            <label class="form-check-label" for="gridRadios1">
+                {{q2op3}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question2}}" id="gridRadios2" value="option4">
+            <label class="form-check-label" for="gridRadios2">
+                {{q2op4}}
+            </label>
+        </div>
+        <br>
+    </div>
+
+    
+    <audio controls>
+        <source src="https://github.com/manokaran007/_voice/raw/main/Maths/Mat3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="form-group">
+        <label for="question">{{question3}}</label>
+      </div>
+    <div class="form-check">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question3}}" id="gridRadios1" value="option1" >
+            <label class="form-check-label" for="gridRadios1">
+                {{q3op1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question3}}" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+                {{q3op2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question3}}" id="gridRadios1" value="option3">
+            <label class="form-check-label" for="gridRadios1">
+                {{q3op3}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question3}}" id="gridRadios2" value="option4">
+            <label class="form-check-label" for="gridRadios2">
+                {{q3op4}}
+            </label>
+        </div>
+        <br>
+    </div>
+
+    
+    <audio controls>
+        <source src="https://github.com/manokaran007/_voice/raw/main/Maths/Mat4.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="form-group">
+        <label for="question">{{question4}}</label>
+      </div>
+    <div class="form-check">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question4}}" id="gridRadios1" value="option1" >
+            <label class="form-check-label" for="gridRadios1">
+                {{q4op1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question4}}" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+                {{q4op2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question4}}" id="gridRadios1" value="option3">
+            <label class="form-check-label" for="gridRadios1">
+                {{q4op3}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question4}}" id="gridRadios2" value="option4">
+            <label class="form-check-label" for="gridRadios2">
+                {{q4op4}}
+            </label>
+        </div>
+        <br>
+    </div>
+
+    
+    <audio controls>
+        <source src="https://github.com/manokaran007/_voice/raw/main/Maths/Mat5.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="form-group">
+        <label for="question">{{question5}}</label>
+      </div>
+    <div class="form-check">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question5}}" id="gridRadios1" value="option1" >
+            <label class="form-check-label" for="gridRadios1">
+                {{q5op1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question5}}" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+                {{q5op2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question5}}" id="gridRadios1" value="option3">
+            <label class="form-check-label" for="gridRadios1">
+                {{q5op3}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{question5}}" id="gridRadios2" value="option4">
+            <label class="form-check-label" for="gridRadios2">
+                {{q5op4}}
+            </label>
+        </div>
+        <br>
+    </div>
+
+
+    
+      
+    
+    <input id='timer' type='hidden' name="timer" value="">
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</main>
+
+  {% endblock %}

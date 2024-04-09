@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    font-family: 'Poppins','sans-serif';
+}
+#entireSectionOuter {
+    margin-top: 100px;
+}
+
+.alphabetOuter ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    grid-gap: 9px;
+}
+
+.alphabetOuter ul li {
+    list-style: none;
+    background-color: #040496;
+    color:#fff;
+    padding: 10px 31px;
+    min-width: 97px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.resultSection {
+    text-align: center;
+}
+
+.resultSection img {
+    width: 80%;
+    border: 1px solid #d8d2d2;
+}

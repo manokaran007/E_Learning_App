@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #012030;
+        }
+        
+        #login-box {
+            background-color: #13678A;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        #login-box h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        
+        #login-box input[type="email"],
+        #login-box input[type="text"],
+        #login-box input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        #login-box input[type="submit"],
+        .button {
+            width: calc(100% - 20px);
+            background-color: #012030;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        #login-box input[type="submit"]:hover,
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-box">
+        <h2>Register</h2>
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            
+        
+            <input type="number" name="age" placeholder="Age" required>
+            <br>
+            <br>
+        
+            
+            <select name="choice" id="choice" required>
+            <option value="" disabled selected>Select Your Category</option>
+            {% for choice in category.CHOICES %}
+                <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+            {% endfor %}
+        </select><br>
+            <input type="email" name="email" placeholder="Email" required="required" >
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Register">
+            <a href="{% url 'user_login' %}" class="button">Go to Login</a>
+        </form>
+    </div>
+</body>
+</html>

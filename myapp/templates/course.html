@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<main>
+
+    <section>
+        
+        <h2>Courses</h2>
+
+        <div class="game-list">
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'tamil' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide1.JPG" class="img-responsive img-rounded my-image" alt="Math 1">
+                </a>
+            </div>
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'english' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide2.JPG" class="img-responsive img-rounded my-image" alt="Math 1">
+                </a>
+            </div>
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'maths' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide3.JPG" class="img-responsive img-rounded my-image" alt="Math 1">
+                </a>
+            </div>
+            
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'computer' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide4.JPG" class="img-responsive img-rounded my-image" alt="Math 2">
+                </a>
+            </div>
+            
+            <!-- Repeat similar blocks for other games -->
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+{% endblock %}
+

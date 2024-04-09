@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<main>
+
+    <section>
+        
+        <h2>Games</h2>
+
+        <div class="game-list">
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'abc' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide6.jpg" class="img-responsive img-rounded my-image" alt="Math 1" >
+                </a>
+            </div>
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'hangman' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide6.jpg" class="img-responsive img-rounded my-image" alt="Math 1">
+                </a>
+            </div>
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'cube' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide6.jpg" class="img-responsive img-rounded my-image" alt="Math 1">
+                </a>
+            </div>
+            
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'chess' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide6.jpg" class="img-responsive img-rounded my-image" alt="Math 2">
+                </a>
+            </div>
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'tower' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide6.jpg" class="img-responsive img-rounded my-image" alt="Math 2">
+                </a>
+            </div>
+            <div class="game">
+                <a class="btn btn-primary" href="{% url 'click' %}">
+                    <img src="https://github.com/manokaran007/i/raw/main/Slide6.jpg" class="img-responsive img-rounded my-image" alt="Math 2">
+                </a>
+            </div>
+            <!-- Repeat similar blocks for other games -->
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+{% endblock %}
+

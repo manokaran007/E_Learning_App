@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("http://clicker.pavelbucka.com/brushed.png");
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 6em;
+  color: #4F5A6D;
+  padding: 10px 50px;  
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#highscore {
+  font-size: 1.5em; 
+}
+
+#over {
+  clear: both;
+  color: #dd6969;
+  font-size: 8em;
+}
+
+.circle {
+  /* width and height will be set by javascript */
+  position: absolute;
+  background: #dd6969;
+  opacity: .5;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'new4.css' %}">
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a>Welcome {{request.user.username}}</a></li>
+          <li><a href="{% url 'course' %}">Courses</a></li>
+          <li><a href="{% url 'game' %}">Games</a></li>
+          <li><a href="{% url 'lb' %}">Leaderboard</a></li>
+          <li id="login"><a href="{% url 'user_login' %}" >Login</a></li>
+          <li id="signup"><a href="{% url 'register' %}">Register</a></li>
+          <li id="signup"><a href="{% url 'feedback' %}">Feedback</a></li>
+          <li id="signup"><a href="{% url 'logout' %}">Logout</a></li>
+       
+    </ul>
+    <ul>
+      <li><a href="/">Home</a></li>
+          
+      <li class="hideOnMobile"><a>Welcome {{request.user.username}}</a></li>
+      
+      <li class="hideOnMobile"><a href="{% url 'course' %}">Courses</a></li>
+      
+      <li class="hideOnMobile"><a href="{% url 'game' %}">Games</a></li>
+      
+      <li class="hideOnMobile"><a href="{% url 'lb' %}">Leaderboard</a></li>
+      
+      <li class="hideOnMobile" id="login"><a href="{% url 'user_login' %}" >Login</a></li>
+      
+      <li class="hideOnMobile" id="signup"><a href="{% url 'register' %}">Register</a></li>
+      
+      <li class="hideOnMobile" id="signup"><a href="{% url 'feedback' %}">Feedback</a></li>
+      <li class="hideOnMobile" id="signup"><a href="{% url 'logout' %}">Logout</a></li>
+      
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    
+    </ul>
+  </nav>
+  {% block content %}{% endblock %}
+
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
+</body>
+</html>

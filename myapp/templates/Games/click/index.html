@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Clicker</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Games/click/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="left">
+  <div id="score" class="text"></div>
+  <div id="highscore" class="text"></div>
+</div>
+<div class="right">
+  <div id="play" class="right link text">START GAME</div>
+  <div id="replay" class="right link text">REPLAY</div>
+  <div id="over" class="right text">GAME OVER!</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'></script><script  src="{% static 'Games/click/script.js' %}"></script>
+
+</body>
+</html>
+
+{% endblock %}
+
